@@ -1,4 +1,5 @@
 import { HasMany } from "@ioc:Adonis/Lucid/Orm";
+import { NotFoundException } from "App/Exceptions/ServiceExceptions";
 import Category from "App/Models/Category";
 import Drink from "App/Models/Drink";
 import { CategoryServiceContract } from "App/interfaces/Category/CategoryServiceContract";
@@ -9,7 +10,11 @@ export default class CategoryService implements CategoryServiceContract {
   }
 
   public async getById(id: number): Promise<Category> {
-    return Category.findOrFail(id)
+    try {
+      return await Category.findOrFail(id)
+    } catch (error) {
+      throw new NotFoundException('Categoria inexistente!')
+    }
   }
 
   public async getDrinksByCategory(id: number): Promise<HasMany<typeof Drink>> {

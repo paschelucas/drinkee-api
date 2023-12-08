@@ -1,3 +1,4 @@
+import { NotFoundException } from "App/Exceptions/ServiceExceptions";
 import Drink from "App/Models/Drink";
 
 export default class DrinkService {
@@ -6,12 +7,16 @@ export default class DrinkService {
   }
 
   public async getById(id: number): Promise<Drink> {
-    return Drink.findOrFail(id);
+    try {
+      return await Drink.findOrFail(id);
+    } catch (error) {
+      throw new NotFoundException("Bebida inexistente!");
+    }
   }
 
   public async search(name: string): Promise<Drink[]> {
-    return Drink.query()
-      .where("name", "ilike", `%${name}%`)
-      .select("id", "name", "recipe", "imageUrl");
+      return Drink.query()
+        .where("name", "ilike", `%${name}%`)
+        .select("id", "name", "recipe", "imageUrl");
   }
 }
