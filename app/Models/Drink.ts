@@ -1,4 +1,3 @@
-// app/Models/Bebida.ts
 import { BaseModel, column, belongsTo, BelongsTo } from '@ioc:Adonis/Lucid/Orm';
 import Category from './Category';
 
