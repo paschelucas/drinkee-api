@@ -3,7 +3,7 @@ import Drink from "App/Models/Drink";
 
 export default class DrinkService {
   public async index(): Promise<Drink[]> {
-    return Drink.query().select("id", "name", "recipe", "imageUrl");
+    return Drink.query().select("id", "name", "recipe", "imageUrl", "categoryId");
   }
 
   public async getById(id: number): Promise<Drink> {
