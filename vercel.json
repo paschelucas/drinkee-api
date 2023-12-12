@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "drinkee-api/server.ts",
+      "src": "server.ts",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "(.*)",
-      "dest": "drinkee-api/server.ts"
+      "dest": "server.ts"
     }
   ]
 }
