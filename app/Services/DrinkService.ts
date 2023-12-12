@@ -17,6 +17,6 @@ export default class DrinkService {
   public async search(name: string): Promise<Drink[]> {
       return Drink.query()
         .where("name", "ilike", `%${name}%`)
-        .select("id", "name", "recipe", "imageUrl");
+        .select("id", "name", "recipe", "imageUrl", "categoryId");
   }
 }
