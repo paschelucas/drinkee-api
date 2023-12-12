@@ -11,8 +11,5 @@
       "src": "(.*)",
       "dest": "drinkee-api/server.ts"
     }
-  ],
-  "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install"
+  ]
 }
