@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": ["server.ts", ".adonisrc.json"],
+      "src": ["server.ts"],
       "use": "@vercel/node"
     }
   ],
@@ -12,6 +12,8 @@
       "dest": ["server.ts"]
     }
   ],
-  "includeFiles": ".adonisrc.json"
+  "functions": [
+    {"includeFiles": ".adonisrc.json"}
+  ]
 
 }
