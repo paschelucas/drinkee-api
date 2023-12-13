@@ -6,5 +6,5 @@
       "dest": ["server.ts"]
     }
   ],
-  "functions": [{ "includeFiles": [".adonisrc.json", "server.ts"] }]
+  "functions": { "includeFiles": [".adonisrc.json", "server.ts"] }
 }
