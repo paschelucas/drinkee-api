@@ -1,15 +1,10 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
-  "routes": [
+  "includeFiles": ["*.json"],
+  "builds": [
     {
-      "src": "(.*)",
-      "dest": "server.ts"
+      "src": "api/**/*.ts",
+      "use": "@vercel/node"
     }
-  ],
-  "functions": {
-    "includeFiles": {
-      "includeFiles": "*.json"
-    }
-  }
+  ]
 }
