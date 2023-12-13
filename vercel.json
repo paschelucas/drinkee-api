@@ -14,9 +14,7 @@
   ],
   "functions": {
     "api": {
-      "includeFiles": [
-        ".adonisrc.json"
-      ]
+      "includeFiles": "*.json"
     }
   }
 }
