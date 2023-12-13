@@ -9,7 +9,7 @@
   ],
   "functions": {
     "includeFiles": {
-      "includeFiles": ".adonisrc.json"
+      "includeFiles": "*.json"
     }
   }
 }
