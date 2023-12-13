@@ -11,5 +11,12 @@
       "src": "(.*)",
       "dest": "server.ts"
     }
-  ]
+  ],
+  "functions": {
+    "api": {
+      "includeFiles": [
+        ".adonisrc.json"
+      ]
+    }
+  }
 }
