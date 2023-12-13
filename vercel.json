@@ -1,10 +1,15 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "routes": [
     {
       "src": "(.*)",
-      "dest": ["server.ts"]
+      "dest": "server.ts"
     }
   ],
-  "functions": { "includeFiles": [".adonisrc.json", "server.ts"] }
+  "functions": {
+    "includeFiles": {
+      "includeFiles": ".adonisrc.json"
+    }
+  }
 }
