@@ -2,6 +2,10 @@
 
 API construída para o case técnico da empresa Faster.
 
+# Deploy
+
+https://drinkee-backend.onrender.com/
+
 
 # Instalação
 
