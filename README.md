@@ -8,6 +8,11 @@ API construída para o case técnico da empresa Faster.
 Acesse a pasta raíz do projeto e execute o comando
 `npm i`
 
+# Migrations e seeds
+
+Para executar o projeto na sua máquina, é necessário criar as tabelas e as preencher. Para tanto, acesse a raíz do projeto e execute o comando
+`npm run db-build`
+
 # Execução
 
 Acesse a pasta raíz do projeto e execute o comando
@@ -26,4 +31,8 @@ Não houve muitas decisões a serem tomadas. O projeto já estabelecia o uso de 
 
 Modelagem simples, contanto com duas entidades.
 <img src="/database/modeling/diagrama-drinkee.svg">
+
+# Documentação da API
+
+https://documenter.getpostman.com/view/19294478/2s9Ykke2TR
 
