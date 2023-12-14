@@ -10,7 +10,7 @@ Acesse a pasta raíz do projeto e execute o comando
 
 # Migrations e seeds
 
-Para executar o projeto na sua máquina, é necessário criar as tabelas e as preencher. Para tanto, acesse a raíz do projeto e execute o comando
+Para executar o projeto na sua máquina, é necessário criar as tabelas e as preencher. Para tanto, remova/comente as linhas <b>44 a 46</b> do arquivo `/config/database.ts`, acesse a pasta raíz do projeto e execute o comando
 `npm run db-build`
 
 # Execução
