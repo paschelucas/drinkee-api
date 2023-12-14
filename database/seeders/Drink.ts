@@ -3,7 +3,7 @@ import Drink from "App/Models/Drink";
 
 export default class extends BaseSeeder {
   public async run() {
-    const uniqueKey = "id";
+    const uniqueKey = "name";
     await Drink.updateOrCreateMany(uniqueKey, [
       {
         name: "ABC",

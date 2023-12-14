@@ -3,7 +3,7 @@ import Category from "App/Models/Category";
 
 export default class extends BaseSeeder {
   public async run() {
-    const uniqueKey = "id";
+    const uniqueKey = "name";
     await Category.updateOrCreateMany(uniqueKey, [
       { name: "ordinary_drink" },
       { name: "cocktail" },
