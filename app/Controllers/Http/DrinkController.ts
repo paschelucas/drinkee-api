@@ -10,12 +10,21 @@ export default class DrinksController {
   }
 
   public async getById({ params }: HttpContextContract): Promise<Drink> {
-    return this.drinkService.getById(params.id);
+    const { id } = params
+
+    return this.drinkService.getById(id);
   }
 
   public async search({ request }: HttpContextContract): Promise<Drink[]> {
     const name = request.input("name");
 
     return this.drinkService.search(name);
+  }
+
+  public async searchInsideCategory({ request, params }: HttpContextContract): Promise<Drink[]> {
+    const name = request.input("name");
+    const { categoryId } = params
+
+    return this.drinkService.searchInsideCategory(categoryId, name);
   }
 }

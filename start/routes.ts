@@ -33,8 +33,10 @@ Route.group(() => {
 
   Route.group(() => {
     Route.get('/drinks', 'DrinkController.index')
+    Route.get('/drinks/:categoryId/search', 'DrinkController.searchInsideCategory')
     Route.get('/drinks/search', 'DrinkController.search')
     Route.get('/drinks/:id', 'DrinkController.getById')
+
   })
 
 }).prefix('api')
